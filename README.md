@@ -1,26 +1,43 @@
 # focus-planner
 
-react for frontend
-node js and express js for backend
-supabase for database
-vercel to deploy frontend
-fly io to deploy backend
-generation of daily plan using openai api
 
-use of openai api to generate summary
+A study planner with an **adaptive daily load** that helps you make consistent progress without burning out.  
+You add topics with **importance** and **confidence**, set a **daily cap**, and Focus Planner generates a **daily plan** prioritising what you should review first. It also supports an **end-of-day reflection** to update confidence and keep future plans adaptive.
 
-Study Planner With Adaptive Daily Load
+## Features
 
-Core vibe: prevents burnout while keeping progress.
-MVP
+- **Topics tracking**
+  - Add topics with **importance/weight** and **confidence**
+- **Daily cap**
+  - Set a daily study limit (e.g., **60 minutes**)
+- **Smart daily plan generation**
+  - Generates a plan within your daily cap
+  - Prioritises **overdue** topics and **low-confidence** topics first
+- **AI assistance (OpenAI API)**
+  - Generates a **daily plan** and/or **summary** (depending on configuration)
 
-Add topics (weight/importance + confidence)
+## Tech Stack
 
-Set daily cap (e.g., 60 min)
+- **Frontend:** React
+- **Backend:** Node.js + Express.js
+- **Database:** Supabase (Postgres)
+- **Deployment:**
+  - Frontend: Vercel
+  - Backend: Fly.io
+- **AI:** OpenAI API (plan generation + summaries)
 
-App generates daily plan within cap
+## Architecture
 
-End-of-day reflection updates confidence
-Wow factor
+- React client calls the Express API
+- Express API handles:
+  - topic + plan logic
+  - database reads/writes via Supabase
+  - OpenAI API calls (keeps API keys on the server)
+- Supabase stores topics, plans, and reflection data
 
-“Smart planner” logic: prioritise overdue + low-confidence first
+## Getting Started (Local)
+
+### 1) Clone the repo
+```bash
+git clone <your-repo-url>
+cd focus-planner
