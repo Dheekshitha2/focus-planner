@@ -1,4 +1,4 @@
-# focus-planner
+# focus-planner (NOTE: work in progress)
 
 
 A study planner with an **adaptive daily load** that helps you make consistent progress without burning out.  
