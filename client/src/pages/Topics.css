@@ -1,0 +1,52 @@
+/* page wrapper */
+.topics-page {
+    max-width: 960px;
+}
+
+/* form */
+.topic-form {
+    display: grid;
+    gap: 8px;
+    max-width: 420px;
+}
+
+.topic-form input {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: transparent;
+    color: inherit;
+}
+
+.topic-form label {
+    display: grid;
+    gap: 6px;
+    font-size: 14px;
+}
+
+.primary-btn {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+
+.error-text {
+    color: crimson;
+    margin: 0;
+}
+
+/* list */
+.divider {
+    margin: 16px 0;
+}
+
+.topic-list {
+    display: grid;
+    gap: 8px;
+    padding-left: 16px;
+}
+
+.refresh-btn {
+    margin-top: 12px;
+}
